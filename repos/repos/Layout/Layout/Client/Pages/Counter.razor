@@ -1,0 +1,14 @@
+﻿@page "/counter"
+@page "/counter/{id:int}"
+
+@layout InnerLayout
+
+<PageTitle>Counter</PageTitle>
+<p>Data of the person with ID : @id</p>
+
+@code {
+    [Parameter]
+    public int? id { get; set; }
+}
+
+

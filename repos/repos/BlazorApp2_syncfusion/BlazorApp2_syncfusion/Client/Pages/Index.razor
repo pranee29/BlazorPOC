@@ -1,0 +1,127 @@
+﻿@page "/"
+@inject IJSRuntime javascript
+
+<SfDashboardLayout  Columns="8" >
+	<DashboardLayoutEvents Created="@onCreate"></DashboardLayoutEvents>
+		<DashboardLayoutPanels >
+			<DashboardLayoutPanel CssClass="" Column="0" Row="0" SizeX="1" SizeY="1">
+				<ContentTemplate>
+					<div class="root-container">
+						<div class="item-container income">
+							<p>$43,300</p>
+							<div class="auto-left">
+								<span class="income-icon e-icon"></span>
+							</div>
+						</div>
+						<div class="bottom-container">
+							<p>Income</p>
+						
+						</div>
+					</div>
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			<DashboardLayoutPanel Column="1" Row="0" SizeX="1" SizeY="1">
+				<ContentTemplate>
+					<div class="root-container">
+						<div class="item-container income">
+							<p>$43,300</p>
+							<div class="auto-left">
+								<span class="income-icon e-icon"></span>
+							</div>
+						</div>
+						<div class="bottom-container">
+							<p>Income</p>
+						</div>
+					</div>
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			<DashboardLayoutPanel Column="2" Row="0" SizeX="1" SizeY="1">
+				<ContentTemplate>
+					<div class="root-container">
+						<div class="item-container expense">
+							<p>$38,060</p>
+							<div class="auto-left">
+								<span class="expense-icon e-icon"></span>
+							</div>
+						</div>
+						<div class="bottom-container">
+							<p>Expenses</p>
+						</div>
+					</div>
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			<DashboardLayoutPanel Column="3" Row="0" SizeX="1" SizeY="1">
+				<ContentTemplate>
+					<div class="root-container">
+						<div class="item-container balance">
+							<p>$38,060</p>
+							<div class="auto-left">
+								<span class="balance-icon e-icon"></span>
+							</div>
+						</div>
+						<div class="bottom-container">
+							<p>Balance</p>
+						</div>
+					</div>
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			<DashboardLayoutPanel Column="4" Row="0" SizeX="1" SizeY="1">
+				<ContentTemplate>
+					<div class="root-container">
+						<div class="item-container transaction">
+							<p>$38,060</p>
+							<div class="auto-left">
+								<span class="transaction-icon e-icon"></span>
+							</div>
+						</div>
+						<div class="bottom-container">
+						
+							<p>Transactions</p>
+						</div>
+					</div>
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			<DashboardLayoutPanel Column="0" Row="1" SizeX="4" SizeY="1">
+				<HeaderTemplate>
+					<span class="title">Income - Expense</span> 
+				</HeaderTemplate>
+				<ContentTemplate>
+					Content
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			<DashboardLayoutPanel Column="4" Row="1" SizeX="4" SizeY="4">
+				<HeaderTemplate>
+					<span class="title">Total Expenses</span>
+				</HeaderTemplate>
+				<ContentTemplate>
+				<canvas id="myChart"></canvas>
+				</ContentTemplate>
+			</DashboardLayoutPanel>
+			@*<DashboardLayoutPanel Column="0" Row="4" SizeX="8" SizeY="8" >
+				<HeaderTemplate>
+					<span class="title">Recent Transactions</span>
+				</HeaderTemplate>
+				<ContentTemplate>
+					
+				
+				</ContentTemplate>
+			</DashboardLayoutPanel>*@
+		</DashboardLayoutPanels>
+	</SfDashboardLayout>
+
+
+<button @onclick="@(async ()=> await javascript.InvokeVoidAsync("myfunc"))">Generate</button>
+
+@code{
+	//protected override async Task  OnInitializedAsync()
+	//{
+	//	await javascript.InvokeVoidAsync("myfunc");
+	//}
+
+
+	public async Task onCreate(Object args)
+	{
+		await Task.Delay(1000);
+		
+	}
+}

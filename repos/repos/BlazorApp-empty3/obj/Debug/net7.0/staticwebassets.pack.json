@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\NHI468\\source\\repos\\Testing\\BlazorApp-empty3\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\NHI468\\source\\repos\\Testing\\BlazorApp-empty3\\obj\\Debug\\net7.0\\build-gz\\vUqdLhgE.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\NHI468\\source\\repos\\Testing\\BlazorApp-empty3\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\NHI468\\source\\repos\\Testing\\BlazorApp-empty3\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorApp-empty3.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BlazorApp-empty3.props",
+      "PackagePath": "build\\BlazorApp-empty3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorApp-empty3.props",
+      "PackagePath": "buildMultiTargeting\\BlazorApp-empty3.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BlazorApp-empty3.props",
+      "PackagePath": "buildTransitive\\BlazorApp-empty3.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

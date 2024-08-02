@@ -1,0 +1,285 @@
+﻿@page "/"
+<PageTitle>CalenderMonth</PageTitle>
+
+<h1>Calender</h1>
+<h2>Display Date: @DisplayDate</h2>
+
+<div class="container mx-auto px-4 py-2 md:py-24">
+    <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+        <div class="flex items-center justify-between py-2 px-6 border-b-2 border-gray-100">
+            <div>
+                <input id="input-date" @bind-value="inputDate" type="date" class="border border-gray-100 p-1 rounded-md" oninput="@getInputDate" />
+            </div>
+            <div class="flex gap-3 place-items-center">
+                <button x-on:click="open=1" class="border rounded-md px-2">
+                    Day
+                </button>
+                <div class="border rounded-md px-2">Week</div>
+                @* <button x-on:click="open=0" onclick="getInputDate()" class="border rounded-md px-2"> *@
+                @*     Month *@
+                @* </button> *@
+                <button x-on:click="open=0" onclick="@getInputDate" class="border rounded-md px-2">
+                    Month
+                </button>
+                <div class="border rounded-md px-2">
+                    <button type="button"
+                            class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex cursor-pointer hover:bg-gray-200 p-1 items-center">
+                        <svg class="h-5 w-5 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <div class="border-r inline-flex h-6"></div>
+                    <button type="button"
+                            class="leading-none rounded-lg transition ease-in-out duration-100 inline-flex items-center cursor-pointer hover:bg-gray-200 p-1">
+                        <svg class="h-5 w-5 text-gray-500 inline-flex leading-none" fill="none" viewBox="0 0 24 24"
+                             stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- <button onclick="getInputDate()">Test</button> -->
+        </div>
+        <!-- month calc show -->
+        <div x-show="open===0" x-cloak>
+            <div class="grid grid-cols-7">
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    sun
+                </div>
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    mon
+                </div>
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    tue
+                </div>
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    wed
+                </div>
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    thu
+                </div>
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    fri
+                </div>
+                <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 pt-6">
+                    sat
+                </div>
+            </div>
+            @* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! *@
+            <div class="grid grid-cols-7 grid-rows-6 days">
+                @if (days_of_month != null)
+                {
+                    @for (var j = 0; j < firstDay; j++)
+                    {
+                        <div class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 h-20 pt-6"></div>
+                    }
+
+                    @for (var i = 0; i < days_of_month[month - 1] + firstDay; i++)
+                    {
+                        if (i >= firstDay)
+                        {
+                            var temp = i - firstDay + 1;
+                            <div onclick="@(() => bindDate(temp))" class="text-gray-600 text-sm uppercase font-bold text-center border-2 border-gray-100 h-20 pt-6">@temp</div>
+                        }
+                    }
+                }
+            </div>
+        </div>
+
+        <!-- daten calc show -->
+        <div x-show="open===1" x-cloak>
+            <div class="grid grid-rows-6">
+                <div class="text-gray-600 text-sm uppercase p-2 font-bold border-b-2 border-gray-100 h-20 relative"
+                     x-on:mouseover="green=true" x-on:mouseleave="green=false" x-cloak>
+                    <div class="border border-gray-300 p-2 border-l-8 border-l-green-500 bg-green-100 rounded-md w-fit h-16">
+                        EmployeeID NHI460
+                    </div>
+                </div>
+                <span x-show="green"
+                      class="absolute max-w-sm bg-green-100 border-gray-50 border rounded-md left-52 top-40 p-2">
+                    your leave is accepted<br />
+                    leave period: 17-4-23 to 19-4-23<br />
+                    reason : sick
+                </span>
+                <div class="text-gray-600 text-sm uppercase p-2 font-bold border-b-2 border-gray-100 h-20 relative"
+                     x-on:mouseover="red=true" x-on:mouseleave="red=false" x-cloak>
+                    <div class="border border-gray-300 p-2 border-l-8 border-l-red-500 bg-red-100 rounded-md w-fit h-16">
+                        EmployeeID NHI460
+                    </div>
+                </div>
+                <span x-show="red" class="absolute max-w-sm bg-red-100 border-gray-50 border rounded-md left-52 top-52 p-2">
+                    your leave is cancelled<br />
+                    leave period: 17-4-23 to 19-4-23<br />
+                    reason : sick
+                    <span x-on:mouseover="red=false"></span>
+                </span>
+                <div class="text-gray-600 text-sm uppercase p-2 font-bold border-b-2 border-gray-100 h-20 relative"
+                     x-on:mouseover="gray=true" x-on:mouseleave="gray=false" x-cloak>
+                    <div class="border border-gray-300 p-2 border-l-8 border-l-gray-500 bg-gray-100 rounded-md w-fit h-16">
+                        EmployeeID NHI460
+                    </div>
+                </div>
+                <span x-show="gray"
+                      class="absolute max-w-sm bg-slate-100 border-gray-50 border rounded-md left-52 top-72 p-2">
+                    your leave is pending<br />
+                    leave period: 17-4-23 to 19-4-23<br />
+                    reason : sick
+                </span>
+                <div class="text-gray-600 text-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    4
+                </div>
+                <div class="text-gray-600 text-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    5
+                </div>
+                <div class="text-gray-600 text-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    6
+                </div>
+                <div class="text-gray-600 text-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    7
+                </div>
+                <div class="text-gray-600 teaxt-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    8
+                </div>
+                <div class="text-gray-600 text-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    9
+                </div>
+                <div class="text-gray-600 text-sm uppercase pl-4 font-bold border-b-2 border-gray-100 h-20 pt-6">
+                    10
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    DateOnly inputDate = DateOnly.FromDateTime(DateTime.Now);
+    List<int> days_of_month;
+    int firstDay;
+    DateOnly currDate;
+    int month;
+    int year;
+    DateOnly DisplayDate = DateOnly.FromDateTime(DateTime.Now);
+
+    protected override void OnInitialized()
+    {
+        generateCalender(inputDate.Month, inputDate.Year);
+    }
+
+    List<string> month_names = new()
+    {
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    };
+
+    Dictionary<string, int> weekDays = new()
+    {
+        {
+            "Sunday", 0
+        },
+        {
+            "Monday", 1
+        },
+        {
+            "Tuesday", 2
+        },
+        {
+            "Wednesday", 3
+        },
+        {
+            "Thursday", 4
+        },
+        {
+            "Friday", 5
+        },
+        {
+            "Saturday", 6
+        }
+    };
+
+    void getInputDate()
+    {
+        Console.WriteLine(inputDate);
+        generateCalender(inputDate.Month, inputDate.Year);
+    }
+
+    void generateCalender(int Month, int Year)
+    {
+        year = Year;
+        month = Month;
+        days_of_month = new List<int>()
+        {
+            31,
+            getFebDays(year),
+            31,
+            30,
+            31,
+            30,
+            31,
+            31,
+            30,
+            31,
+            30,
+            31
+        };
+        currDate = new DateOnly();
+        if (month > 11 || month < 0) month = currDate.Month;
+        if (year.ToString().Length <= 3 || year.ToString().Length > 4) year = currDate.Year;
+
+        Console.WriteLine(new DateOnly(year, month, 1).DayOfWeek);
+        firstDay = weekDays[new DateOnly(year, month, 1).DayOfWeek.ToString()];
+        Console.WriteLine(firstDay);
+    }
+
+    int getFebDays(int year)
+    {
+        return isLeapYear(year) ? 29 : 28;
+    }
+
+    bool isLeapYear(int year)
+    {
+        if ((year % 4 == 0 && year % 100 != 0 && year % 400 != 0) || (year % 100 == 0 && year % 400 == 0))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public static DateTime FirstDayOfWeek(DateTime dt)
+    {
+        var culture = Thread.CurrentThread.CurrentCulture;
+        var diff = dt.DayOfWeek - culture.DateTimeFormat.FirstDayOfWeek;
+        if (diff < 0)
+            diff += 7;
+        return dt.AddDays(-diff).Date;
+    }
+
+    public static DateTime GetFirstDay(int year, int month, DayOfWeek day)
+    {
+        var result = new DateTime(year, month, 1);
+        while (result.DayOfWeek != day)
+        {
+            result = result.AddDays(1);
+        }
+        return result;
+    }
+
+    public void bindDate(int dayNumber)
+    {
+        DisplayDate = new DateOnly(year, month, dayNumber);
+        StateHasChanged();
+    }
+
+}

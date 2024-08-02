@@ -1,0 +1,33 @@
+﻿@page "/counter"
+
+<PageTitle>Counter</PageTitle>
+
+
+<TabControl>
+    <TabPage Text="Tab 1">
+        <h1>The first tab</h1>
+    </TabPage>
+    <TabPage Text="Tab 2">
+        <h1>The second tab</h1>
+    </TabPage>
+    <TabPage Text="Tab 3">
+        <h1>The third tab</h1>
+    </TabPage>
+</TabControl>
+
+
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\bin\Debug\net6.0\BlazorApp1_client_javascript.Shared.deps.json
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\bin\Debug\net6.0\BlazorApp1_client_javascript.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\bin\Debug\net6.0\BlazorApp1_client_javascript.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\refint\BlazorApp1_client_javascript.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\BlazorApp1_client_javascript.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_client_javascript\BlazorApp1_client_javascript\Shared\obj\Debug\net6.0\ref\BlazorApp1_client_javascript.Shared.dll

@@ -1,0 +1,12 @@
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\bin\Debug\net6.0\Layout.Shared.deps.json
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\bin\Debug\net6.0\Layout.Shared.dll
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\bin\Debug\net6.0\Layout.Shared.pdb
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.AssemblyInfo.cs
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.dll
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\refint\Layout.Shared.dll
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\Layout.Shared.pdb
+C:\Users\NHI466\source\repos\Layout\Layout\Shared\obj\Debug\net6.0\ref\Layout.Shared.dll

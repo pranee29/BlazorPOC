@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\bin\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.deps.json
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\bin\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\bin\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\refint\BlazorApp2_suggestions_on_dot.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\BlazorApp2_suggestions_on_dot.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_suggestions_on_dot\BlazorApp2_suggestions_on_dot\Shared\obj\Debug\net6.0\ref\BlazorApp2_suggestions_on_dot.Shared.dll

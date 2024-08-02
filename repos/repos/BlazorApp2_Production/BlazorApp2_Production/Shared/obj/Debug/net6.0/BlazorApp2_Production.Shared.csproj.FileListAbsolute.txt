@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\bin\Debug\net6.0\BlazorApp2_Production.Shared.deps.json
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\bin\Debug\net6.0\BlazorApp2_Production.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\bin\Debug\net6.0\BlazorApp2_Production.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\refint\BlazorApp2_Production.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\BlazorApp2_Production.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp2_Production\BlazorApp2_Production\Shared\obj\Debug\net6.0\ref\BlazorApp2_Production.Shared.dll

@@ -1,0 +1,176 @@
+﻿@page "/fetchdata1"
+
+@using System
+@using Newtonsoft.Json.Linq;
+@using Newtonsoft.Json.Schema;
+@inject HttpClient Http
+<div x-data="users:@userdata()">
+
+</div>
+    <div x-data="{
+      isDropdownOpen: false,
+      selected: [],
+      searchText: '',
+      users: [
+        {
+          name: 'JohnDoe',
+          email: 'johndoe@example.com',
+          avatar: '',
+        },
+        {
+          name: 'JaneDoe',
+          email: 'janedoe@example.com',
+          avatar: '',
+        },
+        {
+          name: 'Bob',
+          email: 'bobsmith@example.com',
+          avatar: '',
+        },
+        {
+          name: 'Riya',
+          email: 'riya@example.com',
+          avatar: '',
+        },
+        {
+          name: 'Thomas',
+          email:'thomas@gmail.com',
+          avatar: '',
+        },
+        {
+            name: 'Susan',
+            email: 'susan@example.com',
+            avatar: '',
+          },
+          {
+            name: 'Priya',
+            email: 'priya@example.com',
+            avatar: '',
+          },
+        {
+          name: 'MaryJohnson',
+          email: 'maryjohnson@example.com',
+          avatar: '',
+        },
+      ],
+      dropdownPosition: 0,
+      isSelected(user) {
+        return this.selected.some((u) => u.email === user.email);
+      },
+      toggle(user) {
+        if (this.isSelected(user)) {
+          this.selected = this.selected.filter((u) => u !== user);
+        } else {
+          this.selected.push(user);
+        }
+        this. updatedropdownPosition();
+      },
+      updatedropdownPosition() {
+       
+            let dropdownPosition=0;
+        this.selected.forEach(user=> {
+            dropdownPosition += user.name.length + 3; // Add 2 for the comma and space separator
+        });
+        dropdownPosition -= 2; // Remove the trailing comma and space
+        this.dropdownPosition = dropdownPosition;
+    
+    
+    },
+    selectOption(user) {
+      if (this.isSelected(user)) {
+          this.removeElementByIdx(user);
+      } else {
+        this.selected.push(user);
+      }
+      this.updatedropdownPosition();
+  },
+      removeElementByIdx(user) {
+        this.selected.splice(user, 1);
+
+       
+        if (!this.selected.length) this.$refs.searchInput.focus();
+      },
+      clearSearch() {
+        this.searchText = '';
+    },
+      closeDropdown() {
+        this.isDropdownOpen = false;
+    },
+      get filteredUsers() {
+        return this.users.filter((user) => {
+          return user.name.toLowerCase().startsWith(this.searchText.toLowerCase()) || user.email.toLowerCase().startsWith(this.searchText.toLowerCase());
+        });
+      }
+    }" class="i23-main-body">
+        <div class="i23-body">
+            <input @click="isDropdownOpen = true" x-ref="searchText" x-model="searchText"
+                @keydown.enter.prevent="selectOption(users.find(user => user.name === searchText)); clearSearch();"
+                class="i23-search" @input="isDropdownOpen = true" type="text">
+            <div class="i23-input-box">
+                <template x-for="(user, index) in selected" :key="user.email">
+                    <div class="i23-template">
+                        <div class="i23-list-element-display "
+                            @click="removeElementByIdx(user);updatedropdownPosition();">
+
+                            <div>
+                                <div class="i23-font-display" x-text="user.name"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div x-show="isDropdownOpen" @click="clearSearch()"
+                :style="{ 'padding-left': `${dropdownPosition*8+9}px` }" @click.away="closeDropdown()">
+                <div class="i23-dropdown">
+                    <template x-for="(user, index) in filteredUsers" :key="user.email">
+                        <li>
+                        <div class="i23-dropdown-items i23-dropdown-items-hover"
+                            @click="toggle(user);dropdownPosition=(dropdownPosition>30)?(dropdownPosition+6)%30:dropdownPosition">
+                            <div class="i23-list-element">
+                                <div>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhtSPnmjr09ERciIU5qjGNMvcXnlNOcJOYA&usqp=CAU"
+                                        class="i23-avatar">
+                                </div>
+                                <div>
+                                    <div class="i23-font-display" x-text="user.name"></div>
+                                    <div class="i23-font-display" x-text="user.email"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                    </template>
+                </div>
+            </div>
+        </div>
+</div>
+
+@code{
+    JObject obj = new JObject();
+
+    class User
+    {
+        public string name {get;set;}
+        public string email { get; set; }
+        public string avatar { get; set; }
+    }
+
+    IEnumerable<User>? users = new List<User>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<User[]>("data.json");
+        foreach(var ch in users)
+        {
+            Console.WriteLine(ch.name);
+        }
+
+    }
+    List<User> selected = new List<User>();
+    List<User> userdata()
+    {
+        return selected;
+    }
+
+}

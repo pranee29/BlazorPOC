@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\bin\Debug\net6.0\BlazorApp3_mud.Shared.deps.json
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\bin\Debug\net6.0\BlazorApp3_mud.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\bin\Debug\net6.0\BlazorApp3_mud.Shared.pdb
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\refint\BlazorApp3_mud.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\BlazorApp3_mud.Shared.pdb
+C:\Users\NHI468\source\repos\BlazorApp3_mud\BlazorApp3_mud\Shared\obj\Debug\net6.0\ref\BlazorApp3_mud.Shared.dll

@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "ynEQmWT8mebJoExF+cPjz1X8yEeG9I5P50sEuHAT7xRwDrm/IGAr9atgvPI5uH0b/Z4cYt6tV8SKszL/1a8qNA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.7\\microsoft.aspnetcore.authorization.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.7\\microsoft.aspnetcore.components.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.7\\microsoft.aspnetcore.components.analyzers.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.7\\microsoft.aspnetcore.components.forms.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.7\\microsoft.aspnetcore.components.web.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.7\\microsoft.aspnetcore.metadata.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.jsinterop\\6.0.7\\microsoft.jsinterop.6.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\mudblazor\\6.0.13\\mudblazor.6.0.13.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\mudblazor.thememanager\\1.0.7\\mudblazor.thememanager.1.0.7.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\NHI468\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

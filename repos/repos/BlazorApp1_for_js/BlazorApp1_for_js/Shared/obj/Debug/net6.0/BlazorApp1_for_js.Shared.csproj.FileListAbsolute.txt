@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\bin\Debug\net6.0\BlazorApp1_for_js.Shared.deps.json
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\bin\Debug\net6.0\BlazorApp1_for_js.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\bin\Debug\net6.0\BlazorApp1_for_js.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\refint\BlazorApp1_for_js.Shared.dll
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\BlazorApp1_for_js.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\BlazorApp1_for_js\BlazorApp1_for_js\Shared\obj\Debug\net6.0\ref\BlazorApp1_for_js.Shared.dll

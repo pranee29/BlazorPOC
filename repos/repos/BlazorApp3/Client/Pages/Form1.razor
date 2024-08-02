@@ -1,0 +1,615 @@
+﻿@page "/form1"
+
+<body class="text-gray-600 screen">
+    <div class="fixed bottom-60 -right-48  -rotate-90">
+
+        @*<div>
+            <div  class="ml-96  i23-form-Quicklinks-List">
+                <div class=" i23-form-Quicklinks-List-cols">
+                    <div class="flex mb-4">
+                        <div class="i23-icon-search mr-3 i23-iconSize-20"></div>
+                        <div>search</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-admin mr-3 i23-iconSize-20"></div>
+                        <div>admin</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-user mr-3 i23-iconSize-20"></div>
+                        <div>user</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-help mr-3 i23-iconSize-20"></div>
+                        <div>help</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-notification mr-3 i23-iconSize-20"></div>
+                        <div>notification</div>
+                    </div>
+                </div>
+            </div>
+            <div class="i23-Form-QuickLink ">
+                <div class=" i23-Form-QuickLink-notify">
+                    Notifications</div>
+            </div>
+              
+           
+        </div>*@
+    </div>
+    <div class="PageContainer ">
+        <div class=" Header   i23-text-s3">
+            <div class="HeaderIcon i23-iconSize-45"></div>
+            <div class="HeaderTitle">Employee Onboarding</div>
+        </div>
+        <!-- Displaying Snackbar on the top -->
+        
+        <div class="i23-Snackbar position-sticky ">
+           
+        @if(count>0 && (firstname.Length==0 || firstname.Length<6)){    
+                
+                <div  class="cursor-pointer py-2" @onclick="()=>first.FocusAsync()" >
+                            Firstname is mandatory
+                </div>
+                    
+            
+        }
+        @if(count>0 && (middlename.Length==0|| middlename.Length<6)){
+                        <div  class="cursor-pointer py-2" @onclick="()=>middle.FocusAsync()">
+                            Middlename is mandatory
+                        </div>
+            
+        }
+
+        @if(count>0 && (lastname.Length==0 || lastname.Length<6)){
+                        <div class="cursor-pointer py-2" @onclick="()=>last.FocusAsync()">
+                            Lastname is mandatory
+                        </div>
+            
+        }
+        @if( count>0 && age<=0){
+                        <div  class="cursor-pointer py-2" @onclick="()=>ageIn.FocusAsync()">
+                            Age
+                        </div>
+            
+        }
+        @if (dialogopen)
+            {
+                <div class="fixed top-96  " @onclick="fout">
+
+
+                    <div >
+                        <div  class="i23-background"   >
+
+                            <div class="i23-layout-error  bg-white rounded shadow-xl ">
+
+
+                                <div class=" w-80  ">
+
+                                    <div class="text-white h-5 pt-1 pl-2  bg-red-400 ">Errors</div>
+                                    <div class="mt-2 pl-2  ">
+                                        <p class="text-sm leading-5 ">
+                                            <div class="text-gray-600">
+                                                @if (firstname.Length==0)
+                                                {
+
+                                                    <div >
+                                                        <div class="cursor-pointer" @onclick="()=>first.FocusAsync()">
+                                                            Firstname is Empty
+                                                        </div>
+
+                                                    </div>
+                                                }
+                                                @if (firstname.Length>0  && firstname.Length<6)
+                                                {
+                                                    <div>
+                                                        <div  class="cursor-pointer" @onclick="()=>first.FocusAsync()">
+                                                            Firstname has less than 6 characters
+                                                        </div>
+
+                                                    </div>
+                                                }
+                                                @if (middlename.Length==0)
+                                                {
+                                                    <div >
+
+                                                        <div  class="cursor-pointer" @onclick="()=>middle.FocusAsync()">
+                                                            Middlename is empty
+                                                        </div>
+
+                                                    </div>
+                                                }
+                                                @if (middlename.Length>0 && middlename.Length<6)
+                                                {
+                                                    <div >
+
+                                                        <div  class="cursor-pointer" @onclick="()=>middle.FocusAsync()">
+                                                            Middle has less than 6 characters
+                                                        </div>
+
+                                                    </div>
+                                                }
+                                                @if (lastname.Length==0)
+                                                {
+                                                    <div >
+
+
+                                                        <div class="cursor-pointer" @onclick="()=>last.FocusAsync()">
+                                                            Lastname is empty
+                                                        </div>
+
+                                                    </div>
+                                                }
+                                                @if (lastname.Length>0 && lastname.Length<6)
+                                                {
+
+                                                    <div >
+
+                                                        <div  class="cursor-pointer" @onclick="()=>last.FocusAsync()">
+                                                            Lastname has less than 6 characters
+                                                        </div>
+
+                                                    </div>
+                                                }
+                                                @if (agecheck)
+                                                {
+                                                    <div>
+
+                                                        <div class="cursor-pointer" @onclick="()=>ageIn.FocusAsync()">
+                                                            Age is empty
+                                                        </div>
+
+
+                                                    </div>
+                                                }
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+              
+            }
+            </div>
+   
+        <div class="Sections">
+            <div class="SectionGroup"  @ref="part1">
+               
+                <div class="SectionHeader i23-text-s4">
+                    <div class="info2 i23-iconSize-16"></div>
+                    <section id="contact">Generic Information</section>
+                      <div class="flex flex-row pt-4 pl-64 ">
+                    </div>
+                    
+                </div>
+                <div class="SectionContainer ">
+                    
+
+                <div class="Section ">
+                    <div class="SectionTitle Attribute-Name">EmployeeID</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class="SectionControls Section-Control">
+                        <input type="text" id="EmpId" name="EmpId" required class="input peer width1 ">
+                        <p class="invisible font-light text-red-700 peer-invalid:visible">
+                            This field must not be Empty
+                        </p>
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+    
+                
+    
+                <div class="Section ">
+                    <div class="SectionTitle Attribute-Name">Employee Name</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class=" SectionControls Section-Control">
+                         <input type="text" id="FirstName" name="FirstName" placeholder="FirstName"   @bind-value="firstname" @bind-value:event="oninput"  @onfocusout="fout" @ref="first" @onfocus="fout"
+                                class="input ml-3 focus:ring-1 ring-gray-300 rounded-md width2">
+                             <input type="text" id="MiddleName" name="MiddleName" placeholder="MiddleName"  @bind-value="middlename" @bind-value:event="oninput" @onfocusout="fout" @ref="middle" @onfocus="fout"
+                                    class="input width2">
+                               <input type="text" id="LastName" name="LastName" placeholder="LastName" @bind-value="lastname" @bind-value:event="oninput" @onfocusout="fout" @ref="last" @onfocus="fout"
+                                     class="input width2">
+                    
+                        
+                       
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+    
+                <div class="Section">
+                    <div class="SectionTitle Attribute-Name">DOB</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class="SectionControls Section-Control">
+                       
+                                <input type="date" class=" input w-full ">
+                        
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+    
+                <div class="Section">
+                    <div class="SectionTitle Attribute-Name">Age</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class="SectionControls Section-Control">
+                        
+                        <input type="number" class="input w-full" @bind-value="age" @bind-value:event="onchange"   @ref="ageIn" @onfocus="fout">
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+               
+            </div>
+            
+            </div>
+          
+    
+            <div class="SectionGroup" @ref="part2">
+                
+                <div class="SectionHeader i23-text-s4">
+                <div class="i23-icon-additionalinfo i23-iconSize-22"></div>
+                <div >Additional Information</div>
+                <div class="pt-4 pl-56 ">
+                    
+                </div>
+                </div>
+                <div class="SectionContainer">
+                    <div class="flex justify-end">
+                        <span class="info-icon i23-iconSize-22"></span>
+                    </div>
+                    
+                <div class="Section2">
+                    <div class="font-semibold gridbox">S.no</div>
+                    <div class="font-semibold gridbox">Name</div>
+                    <div class="font-semibold gridbox">ID</div>
+                    <div class="font-semibold gridbox">DOJ</div>
+                    <div class="font-semibold gridbox">Position</div>
+                    
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+                </div>
+    
+    
+                
+                </div>
+                
+            </div>
+    
+            <div class="SectionGroup" >
+                
+                <div class="SectionHeader i23-text-s4">
+                <div class="i23-icon-projects i23-iconSize-16"></div>
+                <div @ref="part3">Projects</div>
+                
+                </div>
+                <div class="SectionContainer">
+                <div class="Section ">
+                    <table class="w-full text-left table-auto">
+                        <thead class="tablehead ">
+                          <tr>
+                            <th>Name</th>
+                            <th>Team</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="tablehead">
+                            <td>E1</td>
+                            <td>T-360</td>
+                            <td>2020</td>
+                            <td class="m-2 icon-edit i23-iconSize-16">
+    
+                            </td>
+                          </tr>
+                          <tr class="tablehead">
+                            <td>E2</td>
+                            <td>NH-mind</td>
+                            <td>2022</td>
+                            <td class="m-2 icon-edit i23-iconSize-16"></td>
+                          </tr>
+                          <tr class="tablehead"> 
+                            <td>E3</td>
+                            <td>ADSJ</td>
+                            <td>2021</td>
+                            <td class="m-2 icon-edit i23-iconSize-16 ">                           
+                            </td>
+                          </tr>
+                          <tr class="tablehead"> 
+                            <td>E4</td>
+                            <td>AI/ML</td>
+                            <td>2023</td>
+                            <td class="m-2 icon-edit i23-iconSize-16"></td>
+                          </tr>
+                          <tr class="tablehead"> 
+                            <td>E5</td>
+                            <td>Platform</td>
+                            <td>2020</td>
+                            <td class="m-2 icon-edit i23-iconSize-16"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                
+                </div>
+    
+                </div>
+               
+            </div>
+      
+            <div class="i23-floating-button hover:opacity-75 focus:opacity-100">
+                <button class="i23-up-class i23-double-up i23-iconSize-16" @onclick="()=>part3.FocusAsync()"></button>
+                <div class="i23-sect-cl">
+                <div class="i23-section1"  >
+                    <div class="i23-arrow-icons">
+                    <button class="i23-up i23-iconSize-16" @onclick="()=>first.FocusAsync()" ></button>
+                    <button class="pt-3 i23-down i23-iconSize-16" @onclick="()=>first.FocusAsync()"></button>
+                    </div>
+                </div>
+                <div class="i23-section2" >
+        
+                    <div class="i23-arrow-icons ">
+                        <button class="i23-up i23-iconSize-16" @onclick="()=>first.FocusAsync()"></button>
+                        <button class="i23-down i23-iconSize-16 " @onclick="()=>first.FocusAsync()"></button>
+                    </div>
+                </div>
+                <div class="i23-section1" >
+                    <div class="i23-arrow-icons ">
+                    <button class="i23-up i23-iconSize-16" @onclick="()=>first.FocusAsync()"></button>
+                    <button class="i23-down i23-iconSize-16" @onclick="()=>first.FocusAsync()"></button>
+                    </div>
+                </div>
+                </div>
+                <button class="i23-down-class i23-double-down i23-iconSize-16" @onclick="()=>first.FocusAsync()"></button>
+                </div>
+               
+               
+        </div>
+        
+    
+    @*<script>
+        const scrollingElement = (document.scrollingElement || document.body);
+        
+        const scrollToBottom = () => {
+           scrollingElement.scrollTop = scrollingElement.scrollHeight;
+        }
+        
+        const scrollToTop = () => {
+           scrollingElement.scrollTop = 0;
+        }
+        
+        
+        
+        </script>*@
+        <!-- Submit for displaying Snackbar errors -->
+        <div class="flex flex-row gap-4 pb-2">
+        <div class="text-right ">
+            <button class="i23-btn" >Save</button>
+            <button  class="i23-btn-submit" @onclick="submit"></button>
+        </div>
+        <div class="text-right">
+            <button class="i23-btn-cancel"></button>
+
+        </div>
+        <button type="button" onclick="()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact us</button>
+    </div>
+    <button class=" notification "> 
+        <p>Messages</p>
+        <span class="i23-icon-notification i23-iconSize-16 " >
+        </span>
+    </button>
+
+    @*<nav id="Notifications" class="i23-layout-notification i23-font-one  "
+                       >
+                        <ul class="i23-layout-notification-list "
+                            >
+                            <button class="i23-icon-cross i23-iconSize-16 i23-layout-notification-close"
+                               
+                               >
+                            </button>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">You have an invitation!</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Reminder: Mail migration</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">NSL Book Club register</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Start your learning journey here!</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Dynamic Flight Events Update</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Federal Bank Account Updation</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Your Passport details are here</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Document Verification slot booking</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Raise ticket for VPN</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">RDP Installation </a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">NHM Mind downtime alert!</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Collect your Intern ID Card</a>
+                            </li>
+                        </ul>
+                    </nav>*@
+        <div class="Footer">
+           
+        
+        </div>
+    </div>
+    
+   
+    </body>
+
+@code {
+    public string firstname = "";
+    public string lastname = "";
+    public string middlename = "";
+    public int count = 0;
+
+    public bool dialogopen = false;
+
+    public bool fnlen = false;
+    public bool fnlenman = false;
+    ElementReference first;
+
+
+    public bool lnlen = false;
+    public bool lnlenman = false;
+    ElementReference last;
+
+    public bool mnlen = false;
+    public bool mnlenman = false;
+    ElementReference middle;
+
+    public int age = 0;
+    public bool agecheck = false;
+    ElementReference ageIn;
+
+    ElementReference part1;
+    ElementReference part2;
+    ElementReference part3;
+
+
+    HashSet<ElementReference> refs = new HashSet<ElementReference>();
+    List<string> li = new List<string>();
+
+
+    protected override  async Task   OnInitializedAsync()
+    {
+        li.Add("first");
+        li.Add("middle");
+        li.Add("last");
+
+        for(int i = 0; i < 3; i++)
+        {
+            var a= li.ElementAt(i).ToString();
+            
+
+        }
+    }
+
+    public void submit()
+    {
+        count = 1;
+        //Console.WriteLine("asdasdasdd");
+        if (firstname.Length == 0)
+        {
+            fnlenman = true;
+        }
+        else if(firstname.Length>0 && firstname.Length < 3)
+        {
+            fnlen = true;
+        }
+        else if (firstname.Length > 3)
+        {
+            fnlen = false;
+            fnlenman = false;
+        }
+
+        if (middlename.Length == 0)
+        {
+            mnlenman = true;
+        }
+        else if(middlename.Length>0 && middlename.Length < 3)
+        {
+            mnlen = true;
+        }
+        else if (middlename.Length > 3)
+        {
+            mnlen = false;
+            fnlenman = false;
+        }
+
+        if (lastname.Length == 0)
+        {
+            lnlenman = true;
+        }
+        else if(lastname.Length>0 && lastname.Length < 3)
+        {
+            lnlen = true;
+        }
+        else if (lastname.Length > 3)
+        {
+            lnlen = false;
+            lnlenman = false;   
+        }
+
+
+        if(age<=0)
+        {
+            agecheck = true;
+        }
+        else if(age>0)
+        {
+            agecheck = false;
+        }
+
+        dialogopen = fnlen || fnlenman || lnlen || lnlenman || mnlen || mnlenman || agecheck;
+
+
+
+    }
+
+    public bool active = false;
+
+    public void point()
+    {
+        active = true;
+    }
+
+    public void fout()
+    {
+        dialogopen = false;
+    }
+
+
+}

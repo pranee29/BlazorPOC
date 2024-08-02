@@ -1,0 +1,112 @@
+﻿@using System;
+@using System.Collections.Generic;
+
+@page "/innermenu/{text}"
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Layout</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+ 
+
+<div class="@InnerNavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+       
+        @foreach (var item in l4)
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href=@item Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> @item
+                </NavLink>
+             </div>
+        }
+
+
+        
+    </nav>
+</div>
+
+@code {
+    [Parameter]
+    public string text { get; set; }
+    public string temp;
+    List<string> l1 = new List<string>();
+    List<string> l2 = new List<string>();
+    List<string> l3 = new List<string>();
+    List<string> l4 = new List<string>();
+    public InnerNavMenu()
+    {
+
+        l1.Add("h1");
+        l1.Add("h2");
+        l1.Add("h3");
+
+
+        l2.Add("c1");
+        l2.Add("c2");
+        l2.Add("c3");
+        l2.Add("c4");
+
+        l3.Add("f1");
+        l3.Add("f2");
+        l3.Add("f3");
+        l3.Add("f4");
+        l3.Add("f5");
+
+    }
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        temp = text;
+
+        if(temp.CompareTo("")==0)
+        {
+            l4 = l1;
+        }
+
+        else if (temp.CompareTo("counter") == 0 || temp.CompareTo("innermenu/counter") == 0)
+        {
+            l4 = l2;
+        }
+        else if(temp.CompareTo("fetchdata")==0)
+        {
+            l4 = l3;
+        }
+
+        
+    }
+           //if (string.Compare(temp, "/") == 0)
+           // {
+           //     this.l4 = l1;
+           //     Console.WriteLine(temp);
+           // }
+           // else if (string.Compare(temp, "counter") == 0)
+           //     this.l4 = l2;
+           // else
+           //     this.l4 = l3;
+
+    
+
+   
+
+
+    
+        
+
+
+    private bool collapseNavMenu = true;
+
+    private string? InnerNavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

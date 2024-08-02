@@ -1,0 +1,6 @@
+C:\Users\NHI468\source\repos\empty1\obj\Debug\net7.0\empty2.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\empty1\obj\Debug\net7.0\empty2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\empty1\obj\Debug\net7.0\empty2.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\empty1\obj\Debug\net7.0\empty2.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\empty1\obj\Debug\net7.0\empty2.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\empty1\obj\Debug\net7.0\empty2.MvcApplicationPartsAssemblyInfo.cache

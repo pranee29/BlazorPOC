@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\bin\Debug\net6.0\BlazorApp3_Chartjs.Shared.deps.json
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\bin\Debug\net6.0\BlazorApp3_Chartjs.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\bin\Debug\net6.0\BlazorApp3_Chartjs.Shared.pdb
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\refint\BlazorApp3_Chartjs.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\BlazorApp3_Chartjs.Shared.pdb
+C:\Users\NHI468\source\repos\BlazorApp3_Chartjs\BlazorApp3_Chartjs\Shared\obj\Debug\net6.0\ref\BlazorApp3_Chartjs.Shared.dll

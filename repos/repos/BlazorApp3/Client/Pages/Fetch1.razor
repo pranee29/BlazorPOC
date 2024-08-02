@@ -1,0 +1,146 @@
+﻿@page "/fetchdata"
+
+@using System
+@using Newtonsoft.Json.Linq;
+@using Newtonsoft.Json.Schema;
+@inject HttpClient Http
+
+<div class="i23-main-body" @onfocusin="dropA">
+
+    <div class="i23-body">
+        <input class="i23-search" type="text" @onkeyup="change" @bind-value="val" @bind-value:event="oninput" />
+        <div class="i23-input-box">
+            <template>
+                <div class="i23-template">
+                    <div class="i23-list-element-display ">
+
+                        <div>
+                            <div class="i23-font-display"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div class="i23-input-box">
+            @foreach (var items in selected)
+            {
+
+
+                <div class="i23-template">
+                    <div class="i23-list-element-display ">
+                        <div>
+                            <div class="i23-font-display">@items.name</div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            }
+        </div>
+        <div>
+            @if (show)
+            {
+                <div style="padding-left:@dropdownPos">
+                    <div class="i23-dropdown">
+                        @foreach (var items in select)
+                        {
+                            <div class="i23-dropdown-items i23-dropdown-items-hover">
+
+                                <div class="i23-list-element" @onclick="()=>selection(items)">
+                                    <div>
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBhtSPnmjr09ERciIU5qjGNMvcXnlNOcJOYA&usqp=CAU"
+                                     class="i23-avatar">
+                                    </div>
+                                    <div>
+                                        <div class="i23-font-display">@items.name</div>
+                                        <div class="i23-font-display">@items.email</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    class User
+    {
+        public string name { get; set; }
+        public string email { get; set; }
+        public string avatar { get; set; }
+    }
+
+
+    IEnumerable<User>? users1 = new List<User>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        users1 = await Http.GetFromJsonAsync<User[]>("data.json");
+        foreach (var ch in users1)
+        {
+            Console.WriteLine(ch.name);
+        }
+        select = users1.ToList();
+
+    }
+    public string val;
+    List<User> select = new List<User>();
+    HashSet<User> selected = new HashSet<User>();
+    int dropdownPosition = 0;
+    string dropdownPos = "0px";
+    bool show = false;
+
+    public void change()
+    {
+        //Console.WriteLine("changes "+val);
+        select.Clear();
+        if (val != null)
+        {
+            foreach (var items in users1)
+            {
+                if (items.email.ToLower().StartsWith(val.ToLower()))
+                {
+                    select.Add(items);
+                }
+            }
+        }
+
+    }
+    void selection(User user)
+    {
+        if (selected.Contains(user))
+        {
+            selected.Remove(user);
+            dropdownPosition = user.name.Length - 3;
+            dropdownPos = ((dropdownPosition * 8) + 9) + "px";
+        }
+        else
+        {
+            selected.Add(user);
+            dropdownPosition = user.name.Length + 3;
+            dropdownPos = ((dropdownPosition * 8) + 9) + "px";
+        }
+        Console.WriteLine(user.email);
+    }
+
+    public void dropA()
+    {
+        //Console.WriteLine("abcd");
+        show = true;
+    }
+    public void dropD()
+    {
+        show = false;
+        //Console.WriteLine("efgh");
+    }
+
+
+}

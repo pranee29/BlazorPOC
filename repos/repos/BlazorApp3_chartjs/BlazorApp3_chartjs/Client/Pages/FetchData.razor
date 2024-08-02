@@ -1,0 +1,20 @@
+﻿@page "/fetchdata"
+@using BlazorApp3_chartjs.Shared
+@inject HttpClient Http
+
+<div>
+    @((MarkupString)val)
+</div>
+
+@code {
+    private HttpResponseMessage? output;
+    string val;
+    protected override async Task OnInitializedAsync()
+    {
+        output = await Http.GetAsync("/counter");
+
+        var tes = output.Content.ReadAsStringAsync();
+        var tes1 = tes;
+        val = tes1.Result;
+    }
+}

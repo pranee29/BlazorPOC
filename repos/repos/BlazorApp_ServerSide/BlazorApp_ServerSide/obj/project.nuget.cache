@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "01M1O0EdmD9rSAuPZaV8P3Y6CaNJKpMnmPNMg5YCNhaUuoN0v2xv8AYKdUhlW8hMTZXwuW4l+1pbmhcGapvyaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_ServerSide\\BlazorApp_ServerSide\\BlazorApp_ServerSide.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\6.0.11\\microsoft.aspnetcore.components.webassembly.server.6.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

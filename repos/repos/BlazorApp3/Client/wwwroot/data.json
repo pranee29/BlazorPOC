@@ -1,0 +1,42 @@
+[
+	{
+		"name": "JohnDoe",
+		"email": "johndoe@example.com",
+		"avatar": ""
+	},
+	{
+		"name": "JaneDoe",
+		"email": "janedoe@example.com",
+		"avatar": ""
+	},
+	{
+		"name": "Bob",
+		"email": "bobsmith@example.com",
+		"avatar": ""
+	},
+	{
+		"name": "Riya",
+		"email": "riya@example.com",
+		"avatar": ""
+	},
+	{
+		"name": "Thomas",
+		"email": "thomas@gmail.com",
+		"avatar": ""
+	},
+	{
+		"name": "Susan",
+		"email": "susan@example.com",
+		"avatar": ""
+	},
+	{
+		"name": "Priya",
+		"email": "priya@example.com",
+		"avatar": ""
+	},
+	{
+		"name": "MaryJohnson",
+		"email": "maryjohnson@example.com",
+		"avatar": ""
+	}
+]

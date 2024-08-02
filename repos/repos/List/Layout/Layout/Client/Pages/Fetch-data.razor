@@ -1,0 +1,22 @@
+﻿@page "/fetch-data"
+@page "/fetch-data/{id:int}"
+
+@layout InnerLayout 
+@inject Microsoft.AspNetCore.Components.NavigationManager NavigationManager;
+
+<h1>fetch Data</h1>
+
+<button @onclick="() => ButtonHandler()">Find Data</button>
+
+@code {
+
+    [Parameter]
+    public int? id { get; set; }
+
+    private void ButtonHandler()
+    {
+        NavigationManager.NavigateTo($"/counter/{id}");
+
+    }
+}
+<p>id : @id</p>

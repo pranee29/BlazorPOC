@@ -1,0 +1,44 @@
+﻿@page "/fetchdata"
+@using BlazorApp1_for_js.Shared
+@inject HttpClient Http
+@inject IJSRuntime JavaScript
+
+<PageTitle>Weather forecast</PageTitle>
+
+@val
+<button @onclick=@HandleClick>hello</button>
+
+
+
+
+@code {
+    private HttpResponseMessage? output;
+
+
+    string val;
+    
+    
+    protected override async Task OnInitializedAsync()
+    {
+     
+        output = await Http.GetAsync("WeatherForecast");
+        var tes = output.Content.ReadAsStringAsync();
+        var tes1 = tes;
+        File.WriteAllText("Output.js", tes1.Result);
+        val = tes1.Result;
+
+    }
+    private async void HandleClick()
+    {
+        var message = await GetGreeting("abcd");
+        Alert(message);
+    }
+    private void Alert(string message)
+    {
+        JavaScript.InvokeVoidAsync("alert", message);
+    }
+    private ValueTask<string> GetGreeting(string name)
+    {
+        return JavaScript.InvokeAsync<string>("myfunc", name);
+    }
+}

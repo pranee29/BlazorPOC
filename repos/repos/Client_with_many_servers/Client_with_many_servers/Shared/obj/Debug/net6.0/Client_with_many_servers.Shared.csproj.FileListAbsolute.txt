@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\bin\Debug\net6.0\Client_with_many_servers.Shared.deps.json
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\bin\Debug\net6.0\Client_with_many_servers.Shared.dll
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\bin\Debug\net6.0\Client_with_many_servers.Shared.pdb
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.dll
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\refint\Client_with_many_servers.Shared.dll
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\Client_with_many_servers.Shared.pdb
+C:\Users\NHI468\source\repos\Client_with_many_servers\Client_with_many_servers\Shared\obj\Debug\net6.0\ref\Client_with_many_servers.Shared.dll

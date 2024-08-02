@@ -1,0 +1,46 @@
+.i23-RequiredError
+{
+    visibility: hidden;
+    font-weight: 300;
+    --tw-text-opacity: 1;
+    color: rgb(185 28 28 / var(--tw-text-opacity));
+
+}
+.peer:invalid ~ .peer-invalid\:visible {
+    visibility: visible;
+}
+.error-message {
+  
+    display: none;
+    font-weight: 100;
+    color: var(--color-invalid);
+  }
+  .input:not(:placeholder-shown):invalid {
+    border-color: var(--color-invalid);
+    background:linear-gradient(180deg,red,white);
+	background-size: 5px 130px;
+  padding-left: 1rem;
+	background-repeat: no-repeat;
+  }
+.i23-errormsg-class{
+    display: flex;
+    flex-direction: column;
+    
+    padding-left:10rem;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.invisible {
+  visibility: hidden;
+}
+.font-light {
+  font-weight: 300;
+}
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.peer:invalid ~ .peer-invalid\:visible {
+  visibility: visible;
+}

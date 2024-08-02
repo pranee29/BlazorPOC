@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\bin\Debug\net6.0\client_server_split.Shared.deps.json
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\bin\Debug\net6.0\client_server_split.Shared.dll
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\bin\Debug\net6.0\client_server_split.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.dll
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\refint\client_server_split.Shared.dll
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\client_server_split.Shared.pdb
+C:\Users\NHI468\source\repos\Testing\client_server_split\client_server_split\Shared\obj\Debug\net6.0\ref\client_server_split.Shared.dll

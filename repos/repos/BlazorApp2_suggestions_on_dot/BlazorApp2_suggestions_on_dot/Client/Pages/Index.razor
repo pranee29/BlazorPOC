@@ -1,0 +1,173 @@
+﻿@page "/"
+@using System.Text.RegularExpressions;
+@inject DataModel Data
+@inject HttpClient http
+@inject IJSRuntime Javascript
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+
+<input style="width:1080px;margin-top:0px;height:60px; border-color:slategrey;border:groove;" @bind="TextValue" @bind:event="oninput" @onkeydown="@checkKey" list="txtsearch" />
+
+<div>
+
+<MudList id="txtsearch" Clickable="true" @bind-SelectedItem="selectedItem" @bind-SelectedValue="selectedValue">
+    @for (int i = 0; i < List2.Count(); i++)
+    {
+        <div style="margin-left:@p">
+         <MudListItem  Text="@List2.ElementAt(i).ToString()" Value="@i" @onclick="@onclickevent"> </MudListItem>
+        </div>
+    } 
+</MudList>
+</div>
+
+
+@code{
+    public string p = "10px";
+    MudListItem selectedItem;
+    object selectedValue = 1;
+    public string TextValue { get; set; }
+    public List<String> List2 = new List<string>();
+
+
+
+    public HashSet<TreeItemData> TreeItems { get; set; } = new HashSet<TreeItemData>();
+
+    public class TreeItemData
+    {
+        public string Title { get; set; }
+
+        public HashSet<TreeItemData> TreeItems { get; set; }
+
+        public TreeItemData(string title)
+        {
+            Title = title;
+        }
+    }
+
+    Dictionary<Guid, TreeItemData> dict = new Dictionary<Guid, TreeItemData>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Data.data = await http.GetFromJsonAsync<DataModel[]>("Staticdata.json");
+        addtodict(Data.data);
+    }
+    public void addtodict(IEnumerable<DataModel> data)
+    {
+        dict = new Dictionary<Guid, TreeItemData>();
+        dict[Guid.Empty] = new TreeItemData("NSL") { TreeItems = new() };
+        TreeItems.Add(dict[Guid.Empty]);
+        @foreach (var node in Data.data)
+        {
+            dict[node.id] = new TreeItemData(node.name) { TreeItems = new() };
+        }
+        @foreach (var node in Data.data)
+        {
+            dict[node.pid].TreeItems.Add(dict[node.id]);
+        }
+    }
+
+    public int s = 10;
+    public void checkKey(KeyboardEventArgs a)
+    {
+
+
+        if (a.Key == ".")
+        {
+
+
+            string[] splittedlist = TextValue.Split(".");
+            int n = splittedlist.Length;
+            string temp = splittedlist[n - 1];
+            s = n * 20;
+            p = s + "" + "px";
+            List2 = new List<String>();
+            foreach( var d in dict)
+            {
+                if (n == 1 && d.Value.Title.ToLower()==temp.ToLower())
+                {
+                    foreach (var e in d.Value.TreeItems)
+                    {
+                        List2.Add(e.Title);
+                    }
+                }
+
+                foreach(var e in d.Value.TreeItems)
+                {
+                    if (e.Title.ToLower() == temp.ToLower())
+                    {
+                        foreach(var f in e.TreeItems)
+                        {
+                            List2.Add(f.Title);
+                        }
+                    }
+                }
+            }
+
+            foreach(var d in List2)
+            {
+                Console.WriteLine(d);
+            }
+        }
+        else
+        {
+            if (List2.Count != 0)
+            {
+                string[] splittedlist = TextValue.Split(".");
+                int n = splittedlist.Length;
+                string temp = splittedlist[n - 1];
+                List<string> List3 = new List<string>();
+                foreach(var item in List2)
+                {
+                    if (item.ToLower().StartsWith(temp.ToLower()))
+                    {
+                        List3.Add(item);
+                    }
+                }
+                List2 = List3;
+
+            }
+            
+        }
+
+    }
+
+
+    public void onclickevent()
+    {
+
+        int dotcnt = 0;
+        foreach (Match m in Regex.Matches(TextValue, "."))
+        {
+            dotcnt++;
+        }
+
+        String[] temp = TextValue.Split(".");
+        if (temp.Length == dotcnt)
+        {
+            TextValue = TextValue + List2.ElementAt(int.Parse(selectedValue.ToString()));
+        }
+        else
+        {
+            TextValue = "";
+            TextValue = temp[0];
+            for(int i = 1; i < temp.Length - 1; i++)
+            {
+                TextValue = TextValue + "." + temp[i];
+            }
+            TextValue = TextValue +"."+ List2.ElementAt(int.Parse(selectedValue.ToString()));
+
+        }
+
+        List2 = new List<string>();
+
+    }
+
+}

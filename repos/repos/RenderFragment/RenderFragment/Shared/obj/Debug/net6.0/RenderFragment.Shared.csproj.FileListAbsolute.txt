@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\bin\Debug\net6.0\RenderFragment.Shared.deps.json
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\bin\Debug\net6.0\RenderFragment.Shared.dll
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\bin\Debug\net6.0\RenderFragment.Shared.pdb
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.dll
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\refint\RenderFragment.Shared.dll
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\RenderFragment.Shared.pdb
+C:\Users\NHI468\source\repos\RenderFragment\RenderFragment\Shared\obj\Debug\net6.0\ref\RenderFragment.Shared.dll

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZA0q+KMiKoqlkaVYVhzWESdQah5CJFM/x3jGq6O+8xinQn6umwcaQ8orwnTQmekiSyKOaqdmYWtaGp9MJAunyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NHI468\\source\\repos\\Testing\\client_server_split\\client_server_split\\Server\\client_server_split.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NHI468\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\6.0.11\\microsoft.aspnetcore.components.webassembly.server.6.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

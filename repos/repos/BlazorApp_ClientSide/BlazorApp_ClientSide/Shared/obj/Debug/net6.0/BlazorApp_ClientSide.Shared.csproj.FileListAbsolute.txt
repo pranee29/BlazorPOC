@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\bin\Debug\net6.0\BlazorApp_ClientSide.Shared.deps.json
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\bin\Debug\net6.0\BlazorApp_ClientSide.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\bin\Debug\net6.0\BlazorApp_ClientSide.Shared.pdb
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\refint\BlazorApp_ClientSide.Shared.dll
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\BlazorApp_ClientSide.Shared.pdb
+C:\Users\NHI468\source\repos\BlazorApp_ClientSide\BlazorApp_ClientSide\Shared\obj\Debug\net6.0\ref\BlazorApp_ClientSide.Shared.dll

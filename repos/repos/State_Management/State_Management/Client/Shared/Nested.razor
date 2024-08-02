@@ -1,0 +1,33 @@
+﻿@implements IDisposable
+@inject StateContainer StateContainer
+
+<h2>Nested component</h2>
+
+<p>Nested component Property: <b>@currentCount</b></p>
+
+<p>
+    <button @onclick="ChangePropertyValue">
+        Count
+    </button>
+</p>
+@StateContainer.Property
+@code {
+    public int currentCount ;
+    
+    protected override void OnInitialized()
+    {
+        currentCount = StateContainer.Property;
+        StateContainer.OnChange += StateHasChanged;
+    }
+
+    private void ChangePropertyValue()
+    {
+       
+        StateContainer.Property = currentCount++;
+    }
+
+    public void Dispose()
+    {
+        StateContainer.OnChange -= StateHasChanged;
+    }
+}

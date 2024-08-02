@@ -1,0 +1,472 @@
+﻿@page "/abcd"
+
+<body class="text-gray-600 screen" x-data="{sectionTab : 1,section: 'generic',Snackbarfirstname: '', Snackbarmiddlename: '', Snackbarlastname: '', Snackbarage:'',open: false,openMenu : false, open2: false,openlink:false,items:[], currentPage: 1,
+pageSize: 3}">
+    <div class="fixed bottom-60 -right-48  -rotate-90"
+   >
+        <div x-on:mouseleave="openlink = false" x-data="{ openlink: false }" >
+            <div x-show="openlink" class="ml-96  i23-form-Quicklinks-List">
+                <div class=" i23-form-Quicklinks-List-cols">
+                    <div class="flex mb-4">
+                        <div class="i23-icon-search mr-3 i23-iconSize-20"></div>
+                        <div>search</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-admin mr-3 i23-iconSize-20"></div>
+                        <div>admin</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-user mr-3 i23-iconSize-20"></div>
+                        <div>user</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-help mr-3 i23-iconSize-20"></div>
+                        <div>help</div>
+                    </div>
+                    <div class="flex mb-4">
+                        <div class="i23-icon-notification mr-3 i23-iconSize-20"></div>
+                        <div>notification</div>
+                    </div>
+                </div>
+            </div>
+            <div class="i23-Form-QuickLink " :class="openlink ? 'hidden':''" x-cloak>
+                <div class=" i23-Form-QuickLink-notify" x-on:mouseover="openlink = true" >
+                    Notifications</div>
+            </div>
+              
+           
+        </div>
+    </div>
+    <div class="PageContainer ">
+        <div class=" Header   i23-text-s3">
+            <div class="HeaderIcon i23-iconSize-45"></div>
+            <div class="HeaderTitle">Employee Onboarding</div>
+        </div>
+        <!-- Displaying Snackbar on the top -->
+        
+        <div class="i23-Snackbar position-sticky ">
+           
+            
+            <div x-if="(Snackbarfirstname === '' || Snackbarfirstname.length < 6) && open === true">
+                <div>
+                    <form>
+                        <div @click="$refs.InputFirstName.focus()" class="cursor-pointer py-2">
+                            Firstname is mandatory
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div x-if="(Snackbarmiddlename === '' || Snackbarmiddlename.length < 6) && open === true">
+                <div>
+                    <form>
+                        <div @click="$refs.InputMiddleName.focus()" class="cursor-pointer py-2">
+                            Middlename is mandatory
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div x-if="(Snackbarlastname === '' || Snackbarlastname.length < 6) && open === true">
+                <div>
+                    <form>
+                        <div @click="$refs.InputLastName.focus()" class="cursor-pointer py-2">
+                            Lastname is mandatory
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div x-if="Snackbarage === '' && open === true">
+                <div>
+                    <form>
+                        <div @click="$refs.InputAge.focus()" class="cursor-pointer py-2">
+                            Age
+                        </div>
+                    </form>
+                </div>
+            </div>
+         
+            <div class="fixed top-96  ">
+            <div x-if="Snackbarfirstname === '' || Snackbarmiddlename === '' || Snackbarlastname === '' || Snackbarlastname === '' || Snackbarfirstname.length<6 || Snackbarmiddlename.length<6 || Snackbarlastname.length<6">
+                    <div  class="i23-background"  x-show="open2"  >
+      
+                        <div class="i23-layout-error  bg-white rounded shadow-xl " @click.away="open2 = false" x-show="open2">
+                            
+                          
+                          <div class=" w-80  ">
+                            
+                            <div class="text-white h-5 pt-1 pl-2  bg-red-400 ">Errors</div>
+                            <div class="mt-2 pl-2  ">
+                              <p class="text-sm leading-5 ">
+                                <div class="text-gray-600">
+                                    
+                                    <div x-if="Snackbarfirstname === ''">
+                                                <div @click="$refs.InputFirstName.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Firstname is Empty
+                                                </div>
+                                           
+                                    </div>
+                                    <div x-if="Snackbarfirstname.length > 0 && Snackbarfirstname.length < 6 ">
+                                                <div @click="$refs.InputFirstName.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Firstname has less than 6 characters
+                                        </div>
+                                    </div>
+                                    <div x-if="Snackbarmiddlename === ''">
+                                                <div @click="$refs.InputMiddleName.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Middlename is empty
+                                                </div>
+                                    </div>
+                                    <div x-if="Snackbarmiddlename.length>0 && Snackbarmiddlename.length < 6 ">
+                                                <div @click="$refs.InputMiddleName.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Middle has less than 6 characters
+                                                </div>
+                                    </div>
+                                    <div x-if="Snackbarlastname === ''">
+                                        
+                                                <div @click="$refs.InputLastName.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Lastname is empty
+                                                </div>
+                                            
+                                    </div>
+                                    <div x-if="Snackbarlastname.length>0 && Snackbarlastname.length < 6 ">
+                                       
+                                            
+                                                <div @click="$refs.InputLastName.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Lastname has less than 6 characters
+                                                </div>
+                                           
+                                    </div>
+                                    <div x-if="Snackbarlastname === ''">
+                                       
+                                                <div @click="$refs.InputAge.focus(),open2 = !open2" class="cursor-pointer">
+                                                    Age is empty
+                                                </div>
+                                           
+                                    </div>
+                                </div>
+                              </p>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        
+        </div>
+   
+        <div class="Sections">
+            <div class="SectionGroup "  x-ref="genericSection">
+               
+                <div class="SectionHeader i23-text-s4">
+                    <div class="info2 i23-iconSize-16"></div>
+                    <div :class="{'SectionGroupTitle':true,  'underline': section === 'generic' }">Generic Information</div>
+                      <div class="flex flex-row pt-4 pl-64 ">
+                    </div>
+                    
+                </div>
+                <div class="SectionContainer ">
+                    
+
+                <div class="Section ">
+                    <div class="SectionTitle Attribute-Name">EmployeeID</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class="SectionControls Section-Control">
+                        <input type="text" id="EmpId" name="EmpId" required class="input peer width1 ">
+                        <p class="invisible font-light text-red-700 peer-invalid:visible">
+                            This field must not be Empty
+                        </p>
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+    
+                
+    
+                <div class="Section ">
+                    <div class="SectionTitle Attribute-Name">Employee Name</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class=" SectionControls Section-Control">
+                         <input type="text" id="FirstName" name="FirstName" placeholder="FirstName" x-model="Snackbarfirstname"
+                                x-ref="InputFirstName" class="input ml-3 focus:ring-1 ring-gray-300 rounded-md width2">
+                             <input type="text" id="MiddleName" name="MiddleName" placeholder="MiddleName"
+                                    x-model="Snackbarmiddlename" x-ref="InputMiddleName" class="input width2">
+                               <input type="text" id="LastName" name="LastName" placeholder="LastName" x-model="Snackbarlastname"
+                                    x-ref="InputLastName" class="input width2">
+                    
+                        
+                       
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+    
+                <div class="Section">
+                    <div class="SectionTitle Attribute-Name">DOB</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class="SectionControls Section-Control">
+                       
+                                <input type="date" class=" input w-full ">
+                        
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+    
+                <div class="Section">
+                    <div class="SectionTitle Attribute-Name">Age</div>
+                    <div class="SectionDesc"></div>
+                    <div class="SectionExample"></div>
+                    <div class="SectionControls Section-Control">
+                        
+                        <input type="number" class="input w-full" x-model="Snackbarage" x-ref="InputAge">
+                    </div>
+                    <div class="SectionErrors"></div>
+                    <div class="SectionHelp"></div>
+                </div>
+               
+            </div>
+            
+            </div>
+          
+    
+            <div class="SectionGroup" x-ref="additionalSection">
+                
+                <div class="SectionHeader i23-text-s4">
+                <div class="i23-icon-additionalinfo i23-iconSize-22"></div>
+                <div :class="{'SectionGroupTitle':true,  'underline': section === 'additional' }">Additional Information</div>
+                <div class="pt-4 pl-56 ">
+                    
+                </div>
+                </div>
+                <div class="SectionContainer">
+                    <div class="flex justify-end">
+                        <span class="info-icon i23-iconSize-22"></span>
+                    </div>
+                    
+                <div class="Section2">
+                    <div class="font-semibold gridbox">S.no</div>
+                    <div class="font-semibold gridbox">Name</div>
+                    <div class="font-semibold gridbox">ID</div>
+                    <div class="font-semibold gridbox">DOJ</div>
+                    <div class="font-semibold gridbox">Position</div>
+                    
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+    
+                    <input type="number" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input type="text" class="gridbox">
+                    <input  type="date" class="gridbox">
+                    <input type="text" class="gridbox">
+                    
+                </div>
+    
+    
+                
+                </div>
+                
+            </div>
+    
+            <div class="SectionGroup" x-ref="otherinfo">
+                
+                <div class="SectionHeader i23-text-s4">
+                <div class="i23-icon-projects i23-iconSize-16"></div>
+                <div :class="{'SectionGroupTitle':true,  'underline': section === 'otherinfo' }">Projects</div>
+                
+                </div>
+                <div class="SectionContainer">
+                <div class="Section ">
+                    <table class="w-full text-left table-auto">
+                        <thead class="tablehead ">
+                          <tr>
+                            <th>Name</th>
+                            <th>Team</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="tablehead">
+                            <td>E1</td>
+                            <td>T-360</td>
+                            <td>2020</td>
+                            <td class="m-2 icon-edit i23-iconSize-16">
+    
+                            </td>
+                          </tr>
+                          <tr class="tablehead">
+                            <td>E2</td>
+                            <td>NH-mind</td>
+                            <td>2022</td>
+                            <td class="m-2 icon-edit i23-iconSize-16"></td>
+                          </tr>
+                          <tr class="tablehead"> 
+                            <td>E3</td>
+                            <td>ADSJ</td>
+                            <td>2021</td>
+                            <td class="m-2 icon-edit i23-iconSize-16 ">                           
+                            </td>
+                          </tr>
+                          <tr class="tablehead"> 
+                            <td>E4</td>
+                            <td>AI/ML</td>
+                            <td>2023</td>
+                            <td class="m-2 icon-edit i23-iconSize-16"></td>
+                          </tr>
+                          <tr class="tablehead"> 
+                            <td>E5</td>
+                            <td>Platform</td>
+                            <td>2020</td>
+                            <td class="m-2 icon-edit i23-iconSize-16"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                
+                </div>
+    
+                </div>
+               
+            </div>
+      
+            <div class="i23-floating-button hover:opacity-75 focus:opacity-100">
+                @*<button class="i23-up-class i23-double-up i23-iconSize-16" onClick="scrollToTop()"></button>*@
+                <div class="i23-sect-cl">
+                <div class="i23-section1" x-show="sectionTab === 1" >
+                    <div class="i23-arrow-icons ">
+                    <button class="i23-up i23-iconSize-16" @click="section = 'generic'; $refs.genericSection.scrollIntoView({ behavior: 'smooth' }); sectionTab = 1"></button>
+                    <button class="pt-3 i23-down i23-iconSize-16" @click="section = 'additional'; $refs.additionalSection.scrollIntoView({ behavior: 'smooth' }); sectionTab = 2"></button>
+                    </div>
+                </div>
+                <div class="i23-section2" x-show="sectionTab === 2">
+        
+                    <div class="i23-arrow-icons ">
+                        <button class="i23-up i23-iconSize-16" @click="section = 'generic'; $refs.genericSection.scrollIntoView({ behavior: 'smooth' }); sectionTab = 1"></button>
+                        <button class="i23-down i23-iconSize-16 " @click="section = 'otherinfo'; $refs.otherinfo.scrollIntoView({ behavior: 'smooth' }); sectionTab = 3"></button>
+                    </div>
+                </div>
+                <div class="i23-section1" x-show="sectionTab === 3">
+                    <div class="i23-arrow-icons ">
+                    <button class="i23-up i23-iconSize-16" @click="section = 'additional'; $refs.additionalSection.scrollIntoView({ behavior: 'smooth' }); sectionTab = 2"></button>
+                    <button class="i23-down i23-iconSize-16" @click="section = 'otherinfo'; $refs.otherinfo.scrollIntoView({ behavior: 'smooth' }); sectionTab = 3"></button>
+                    </div>
+                </div>
+                </div>
+                @*<button class="i23-down-class i23-double-down i23-iconSize-16" onClick="scrollToBottom()"></button>*@
+                </div>
+               
+               
+        </div>
+        
+    
+    @*<script>
+        const scrollingElement = (document.scrollingElement || document.body);
+        
+        const scrollToBottom = () => {
+           scrollingElement.scrollTop = scrollingElement.scrollHeight;
+        }
+        
+        const scrollToTop = () => {
+           scrollingElement.scrollTop = 0;
+        }
+        
+        
+        
+        </script>*@
+        <!-- Submit for displaying Snackbar errors -->
+        <div class="flex flex-row gap-4 pb-2">
+        <div class="text-right ">
+            <button class="i23-btn" x-on:click="items.splice(0, items.length)">Save</button>
+            <button @click="open2=true,open = true" class="i23-btn-submit"></button>
+        </div>
+        <div class="text-right">
+            <button class="i23-btn-cancel"></button>
+        </div>
+    </div>
+    <button class=" notification "@click="openMenu=!openMenu"> 
+        <p>Messages</p>
+        <span class="i23-icon-notification i23-iconSize-16 " >
+        </span>
+    </button>
+
+    <nav id="Notifications" class="i23-layout-notification i23-font-one  "
+                        :class="openMenu ? 'visible':'invisible' " x-cloak>
+                        <ul class="i23-layout-notification-list "
+                            :class=" openMenu ? 'translate-y-0' : 'translate-y-full' ">
+                            <button class="i23-icon-cross i23-iconSize-16 i23-layout-notification-close"
+                                @click="openMenu = !openMenu" :aria-expanded="openMenu" aria-controls="Notifications"
+                                :aria-label="Close Notifications">
+                            </button>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">You have an invitation!</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Reminder: Mail migration</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">NSL Book Club register</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Start your learning journey here!</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Dynamic Flight Events Update</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Federal Bank Account Updation</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Your Passport details are here</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Document Verification slot booking</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Raise ticket for VPN</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">RDP Installation </a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">NHM Mind downtime alert!</a>
+                            </li>
+                            <li class="border-b border-inherit">
+                                <a href="#" class="block p-4">Collect your Intern ID Card</a>
+                            </li>
+                        </ul>
+                    </nav>
+        <div class="Footer">
+           
+        
+        </div>
+    </div>
+    
+   
+    </body>
+
+@code {
+    public void change()
+    {
+        Console.WriteLine("Changed");
+    }
+}

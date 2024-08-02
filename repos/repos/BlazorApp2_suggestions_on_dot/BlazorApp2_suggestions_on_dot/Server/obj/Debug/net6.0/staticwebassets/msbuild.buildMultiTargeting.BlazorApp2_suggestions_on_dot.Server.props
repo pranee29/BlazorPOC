@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BlazorApp2_suggestions_on_dot.Server.props" />
+</Project>

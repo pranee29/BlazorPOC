@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\client_server_split.Client.props" />
+</Project>

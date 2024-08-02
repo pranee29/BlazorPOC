@@ -1,0 +1,244 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Server\\BlazorApp_MudBlazor.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Client\\BlazorApp_MudBlazor.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Client\\BlazorApp_MudBlazor.Client.csproj",
+        "projectName": "BlazorApp_MudBlazor.Client",
+        "projectPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Client\\BlazorApp_MudBlazor.Client.csproj",
+        "packagesPath": "C:\\Users\\NHI468\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\NHI468\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj": {
+                "projectPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "MudBlazor.ThemeManager": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Server\\BlazorApp_MudBlazor.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Server\\BlazorApp_MudBlazor.Server.csproj",
+        "projectName": "BlazorApp_MudBlazor.Server",
+        "projectPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Server\\BlazorApp_MudBlazor.Server.csproj",
+        "packagesPath": "C:\\Users\\NHI468\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\NHI468\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Client\\BlazorApp_MudBlazor.Client.csproj": {
+                "projectPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Client\\BlazorApp_MudBlazor.Client.csproj"
+              },
+              "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj": {
+                "projectPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "MudBlazor.ThemeManager": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj",
+        "projectName": "BlazorApp_MudBlazor.Shared",
+        "projectPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\BlazorApp_MudBlazor.Shared.csproj",
+        "packagesPath": "C:\\Users\\NHI468\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NHI468\\source\\repos\\BlazorApp_MudBlazor\\BlazorApp_MudBlazor\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\NHI468\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MudBlazor.ThemeManager": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

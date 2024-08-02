@@ -1,0 +1,12 @@
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\bin\Debug\net6.0\State_Management.Shared.deps.json
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\bin\Debug\net6.0\State_Management.Shared.dll
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\bin\Debug\net6.0\State_Management.Shared.pdb
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.csproj.AssemblyReference.cache
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.AssemblyInfoInputs.cache
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.AssemblyInfo.cs
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.csproj.CoreCompileInputs.cache
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.dll
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\refint\State_Management.Shared.dll
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\State_Management.Shared.pdb
+C:\Users\NHI468\source\repos\State_Management\State_Management\Shared\obj\Debug\net6.0\ref\State_Management.Shared.dll
